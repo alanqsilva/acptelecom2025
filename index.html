@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACPTelecom - Alan Queiroz da Silva: Consultoria, Assessoria e Projetos em Telecomunicações</title>
+    <!-- Link para o Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para a fonte Inter e outros ajustes */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8; /* Cor de fundo suave */
+        }
+        /* Estilo para o banner com imagem de fundo */
+        .hero-banner {
+            background-color: #1f2937; /* Cinza escuro para o banner */
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Para garantir que as animações fiquem dentro */
+        }
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.co/1920x600/333333/FFFFFF?text=Animação+de+Antenas+e+Torres'); /* Placeholder para animação */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2; /* Suaviza a imagem de fundo */
+            z-index: 0;
+        }
+        .hero-banner .container {
+            position: relative;
+            z-index: 1;
+        }
+        /* Estilo para a logo no cabeçalho */
+        .header-logo {
+            max-height: 50px; /* Altura máxima da logo */
+            width: auto; /* Largura automática para manter proporção */
+        }
+        /* Estilos para ícones de serviço */
+        .service-icon {
+            font-size: 3rem; /* Tamanho dos ícones */
+            color: #4b5563; /* Cor cinza escuro para os ícones */
+            margin-bottom: 1rem;
+        }
+        /* Estilo para o mapa do Google */
+        .google-map {
+            width: 100%;
+            height: 400px;
+            border-radius: 0.75rem; /* Cantos arredondados */
+            border: 0;
+        }
+
+        /* Animação simples para o banner (exemplo) */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-gray-900 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <!-- A imagem da logo será inserida aqui. Você precisará fazer o upload da sua logo para o seu repositório do GitHub e referenciá-la aqui. -->
+                <img src="Nova Logo ACPTelecom.jpg" alt="Logo ACPTelecom" class="header-logo rounded-md">
+                <div class="ml-4">
+                    <h1 class="text-2xl font-bold text-white">ACPTelecom</h1>
+                    <p class="text-sm text-gray-400">Alan Queiroz da Silva: Consultoria, Assessoria e Projetos em Telecomunicações</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#inicio" class="text-gray-300 hover:text-gray-100 font-medium transition duration-300">Início</a></li>
+                    <li><a href="#servicos" class="text-gray-300 hover:text-gray-100 font-medium transition duration-300">Serviços</a></li>
+                    <li><a href="#vantagens" class="text-gray-300 hover:text-gray-100 font-medium transition duration-300">Vantagens</a></li>
+                    <li><a href="#sobre" class="text-gray-300 hover:text-gray-100 font-medium transition duration-300">Sobre</a></li>
+                    <li><a href="#contato" class="text-gray-300 hover:text-gray-100 font-medium transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Início (Banner) -->
+        <section id="inicio" class="hero-banner animate-fade-in">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-extrabold mb-4 leading-tight">Conecte seu negócio ao futuro com as soluções de telecomunicações da ACPTelecom!</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Como engenheiro de telecomunicações com vasta experiência, ofereço projetos personalizados e serviços especializados para otimizar a comunicação da sua empresa.</p>
+                <a href="#servicos" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Saiba Mais</a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós (breve) -->
+        <section id="sobre-breve" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-4xl font-bold text-gray-800 mb-6">Mais de 18 Anos de Experiência em Telecomunicações</h3>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">A ACPTelecom, liderada pelo engenheiro Alan Queiroz da Silva, oferece soluções completas em telecomunicações para empresas de todos os portes. Nossa equipe de especialistas está pronta para projetar, implementar e manter a sua infraestrutura de comunicação, garantindo a conectividade e a segurança que seu negócio precisa.</p>
+            </div>
+        </section>
+
+        <!-- Seção Serviços (Destaque) -->
+        <section id="servicos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12">Nossas Principais Soluções</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Serviço 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <div class="service-icon mb-4">📞</div> <!-- Ícone de telefone -->
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Consultoria e Projetos de Telecomunicações</h4>
+                        <p class="text-gray-700">Planejamento e implementação de soluções personalizadas para suas necessidades de comunicação.</p>
+                    </div>
+                    <!-- Serviço 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <div class="service-icon mb-4">☁️📱</div> <!-- Ícone de nuvem com telefone -->
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Soluções VoIP</h4>
+                        <p class="text-gray-700">Modernize sua comunicação com sistemas VoIP eficientes e econômicos.</p>
+                    </div>
+                    <!-- Serviço 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <div class="service-icon mb-4">📶</div> <!-- Ícone de sinal Wi-Fi -->
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Projetos de Redes Wireless</h4>
+                        <p class="text-gray-700">Conecte seus dispositivos sem fio com segurança e alta velocidade.</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="#servicos-full" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Ver Todos os Serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada para Ação (Fale Conosco) -->
+        <section class="py-16 bg-gray-900 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold mb-6">Fale com Nossos Especialistas!</h3>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Entre em contato para solicitar um orçamento ou esclarecer suas dúvidas.</p>
+                <a href="#contato" class="bg-white text-gray-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Fale Conosco</a>
+            </div>
+        </section>
+
+        <!-- Seção Serviços (Completa - para a página Serviços) -->
+        <section id="servicos-full" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Nossos Serviços Completos</h3>
+                <div class="space-y-12">
+                    <!-- Serviço: Consultoria e projetos de telecomunicações -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">📞</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Consultoria e Projetos de Telecomunicações</h4>
+                            <p class="text-gray-700">Avaliação das necessidades de comunicação da empresa, planejamento e implementação de soluções personalizadas, incluindo VoIP, redes de dados, cabeamento estruturado e redes wireless.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Projetos de redes de computadores e cabeamento estruturado -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">💻</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Projetos de Redes de Computadores e Cabeamento Estruturado</h4>
+                            <p class="text-gray-700">Design e instalação de redes de computadores eficientes e seguras, incluindo cabeamento estruturado para dados, voz e vídeo, garantindo alta performance e escalabilidade.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Projetos de redes Wireless -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">📡</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Projetos de Redes Wireless</h4>
+                            <p class="text-gray-700">Implantação de redes sem fio seguras e de alta velocidade para conectar dispositivos móveis e garantir a mobilidade dos funcionários.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Soluções VoIP -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">🗣️</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Soluções VoIP</h4>
+                            <p class="text-gray-700">Implementação de sistemas VoIP completos, incluindo hardware, software, configuração, treinamento e suporte, para modernizar a comunicação da empresa e reduzir custos.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Manutenção em redes de computadores e microcomputadores -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">🔧</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Manutenção em Redes de Computadores e Microcomputadores</h4>
+                            <p class="text-gray-700">Suporte técnico preventivo e corretivo para garantir o funcionamento contínuo da infraestrutura de TI, incluindo redes, servidores, computadores e periféricos.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Instalações e reinstalações de sistemas operacionais e programas -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">💿</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Instalações e Reinstalações de Sistemas Operacionais e Programas</h4>
+                            <p class="text-gray-700">Instalação, configuração e atualização de sistemas operacionais (Windows, Linux, etc.) e softwares de produtividade, segurança e gestão, otimizando o desempenho dos equipamentos.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço: Compartilhamento de internet -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="md:w-1/4 text-center md:text-left mb-4 md:mb-0">
+                            <div class="service-icon">🌐</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Compartilhamento de Internet</h4>
+                            <p class="text-gray-700">Configuração de roteadores e firewalls para compartilhar a conexão de internet de forma segura e eficiente entre os dispositivos da empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#contato" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Solicite um Orçamento Personalizado!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Vantagens -->
+        <section id="vantagens" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Suas Vantagens ao Contratar a ACPTelecom</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Vantagem 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Otimização dos Recursos</h4>
+                        <p class="text-gray-700">O VoIP e as soluções de comunicação unificada permitem integrar diferentes canais (voz, vídeo, mensagens) em uma plataforma, eliminando a necessidade de múltiplos sistemas.</p>
+                    </div>
+                    <!-- Vantagem 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Atualização Tecnológica da Rede de Comunicação</h4>
+                        <p class="text-gray-700">A adoção de nossas soluções moderniza sua comunicação, permitindo recursos avançados como videoconferência, integração com CRM e mobilidade.</p>
+                    </div>
+                    <!-- Vantagem 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Controle e Redução no Consumo de Suprimentos</h4>
+                        <p class="text-gray-700">Ao unificar a comunicação, reduzimos a necessidade de linhas telefônicas tradicionais, hardware específico e manutenção, gerando economia.</p>
+                    </div>
+                    <!-- Vantagem 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Redução de Custos</h4>
+                        <p class="text-gray-700">Chamadas VoIP, especialmente de longa distância e internacionais, são significativamente mais baratas. A otimização de processos também contribui para a redução de custos operacionais.</p>
+                    </div>
+                    <!-- Vantagem 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3">Melhoria dos Processos, Aumento de Produtividade e Segurança</h4>
+                        <p class="text-gray-700">Oferecemos roteamento inteligente de chamadas, filas de espera, integração com aplicativos de negócios e relatórios detalhados, melhorando a eficiência e a produtividade. A criptografia das chamadas também aumenta a segurança.</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#contato" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Descubra Como Podemos Ajudar Sua Empresa!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre (Completa) -->
+        <section id="sobre" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Sobre a ACPTelecom e Alan Queiroz da Silva</h3>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-12">
+                    <h4 class="text-3xl font-semibold text-gray-800 mb-4">A História da ACPTelecom</h4>
+                    <p class="text-lg text-gray-700 leading-relaxed">A ACPTelecom é uma empresa especializada em soluções de telecomunicações, fundada e liderada pelo engenheiro Alan Queiroz da Silva. Com vasta experiência no setor público e privado, oferecemos serviços de alta qualidade, personalizados para atender às necessidades de cada cliente. Nossa missão é conectar pessoas e empresas, impulsionando o crescimento e a inovação por meio da tecnologia.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h4 class="text-3xl font-semibold text-gray-800 mb-4">Alan Queiroz da Silva - Engenheiro de Telecomunicações</h4>
+                    <p class="text-lg text-gray-700 mb-4">**Identificação:** Alan Queiroz da Silva - Engº. de Telecomunicações CREA/PA: 14.414 – D</p>
+                    <p class="text-lg text-gray-700 mb-4">**Graduação:** Engenharia de Telecomunicações pelo Instituto de Estudos Superiores da Amazônia - IESAM - PA (2005).</p>
+                    <p class="text-lg text-gray-700 mb-4">**Especializações:** Segurança da Informação (IAESB - BA, 2008) e Sistemas de Telecomunicações (ESAB, 2017).</p>
+                    <p class="text-lg text-gray-700 mb-4">**Atuação Profissional:** Atualmente, Especialista Executivo: Analista de Suporte no Governo do Acre, gerenciando e fiscalizando contratos administrativos de links de internet, telefonia fixa e projetos de rede óptica. Em horário não comercial, atua como profissional liberal, elaborando projetos de redes de computadores e telecomunicações (fibra óptica, wireless, cabeamento estruturado e datacenters). Possui experiência como Professor Visitante em instituições de ensino.</p>
+                    <p class="text-lg text-gray-700 mb-4">**Competências Específicas:** Elaboração de Projetos de infraestrutura de Redes LAN/WAN, análise e elaboração de laudos técnicos, planilhas orçamentárias, instalação e configuração de ativos de rede, gerência de infraestrutura, conhecimentos de Auto Cad. Perfil dinâmico, pró-ativo, capacidade analítica e de planejamento, boa comunicação.</p>
+                    <p class="text-lg text-gray-700">**Lattes:** Para detalhes completos do currículo, acesse: <a href="http://lattes.cnpq.br/7450522116006863" target="_blank" class="text-gray-600 hover:underline">http://lattes.cnpq.br/7450522116006863</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Fale Conosco</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Informações de Contato -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Informações de Contato</h4>
+                        <p class="text-lg text-gray-700 mb-2">📞 **Telefone:** (68) 98114-5306</p>
+                        <p class="text-lg text-gray-700 mb-2">📧 **E-mail:** [endereço de e-mail removido]</p>
+                        <p class="text-lg text-gray-700 mb-4">📍 **Endereço:** Rua Tiradentes, 158, Vilage Tiradentes, Rio Branco - AC - CEP 69914090</p>
+                        <a href="https://www.google.com/maps/search/CEP+69914090+-+Rua+Tiradentes,+158,+Vilage+Tiradentes,+Rio+Branco+-+AC+-+CEP+69914090./" target="_blank" class="text-gray-600 hover:underline font-medium">Ver no Google Maps</a>
+                    </div>
+
+                    <!-- Formulário de Contato -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Envie-nos uma Mensagem</h4>
+                        <form>
+                            <div class="mb-4">
+                                <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                                <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Seu nome completo">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">E-mail:</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="seu.email@exemplo.com">
+                            </div>
+                            <div class="mb-4">
+                                <label for="telefone" class="block text-gray-700 text-sm font-bold mb-2">Telefone (opcional):</label>
+                                <input type="tel" id="telefone" name="telefone" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="(XX) XXXXX-XXXX">
+                            </div>
+                            <div class="mb-6">
+                                <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Descreva sua necessidade ou pergunta"></textarea>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <button type="submit" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Enviar Mensagem</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Melhore a Estrutura do Seu Site -->
+        <section id="melhore-site" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-4xl font-bold text-gray-800 mb-6">Consultoria para Otimização da Estrutura do Seu Site</h3>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8">Um site bem estruturado é fundamental para o sucesso do seu negócio online. Ele melhora a experiência do usuário, aumenta a visibilidade nos mecanismos de busca e gera mais leads e vendas.</p>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">A ACPTelecom oferece consultoria especializada para otimizar o seu site, desde a análise da estrutura até a implementação de técnicas de SEO.</p>
+                <a href="#contato" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Solicite uma Análise Gratuita do Seu Site!</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <!-- A imagem da logo será inserida aqui. Você precisará fazer o upload da sua logo para o seu repositório do GitHub e referenciá-la aqui. -->
+            <img src="Nova Logo ACPTelecom.jpg" alt="Logo ACPTelecom" class="header-logo mx-auto mb-4 rounded-md">
+            <p class="text-lg mb-4">📞 (68) 98114-5306 | 📧 [endereço de e-mail removido]</p>
+            <p class="text-lg mb-4">📍 Rua Tiradentes, 158, Vilage Tiradentes, Rio Branco - AC - CEP 69914090</p>
+            <p class="text-sm">&copy; 2024 ACPTelecom. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

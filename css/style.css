@@ -8,13 +8,12 @@ body {
     background-color: var(--dark-bg);
     color: white;
     font-family: 'Inter', sans-serif;
-    margin: 0;
 }
 
 .hero-section {
     height: 100vh;
     background: linear-gradient(to right, rgba(10, 10, 10, 0.9), transparent), 
-                url('../assets/banner-hero.jpg');
+                url('../assets/banner-hero.jpg'); /* O ../ volta uma pasta para achar a imagem */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -25,4 +24,17 @@ body {
     background: linear-gradient(90deg, #fff, var(--tech-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Linha de animação na base (Web 3.0) */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--tech-blue), transparent);
+    box-shadow: 0 0 15px var(--tech-blue);
 }

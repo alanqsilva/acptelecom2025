@@ -1,33 +1,30 @@
-/* Custom Styles ACPTelecom */
+/* Efeito Web 3.0 */
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
 
-/* Efeito de Vidro Suave para o Header */
-header {
-    background: rgba(255, 255, 255, 0.95);
-    transition: all 0.3s ease;
+.mask-gradient {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-/* Tipografia de Engenharia */
-h1, h2, h3 {
-    letter-spacing: -0.01em;
+/* Scrollbar Personalizada Dark */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
 }
 
-/* Mapa com tom levemente dessaturado */
-iframe {
-    filter: grayscale(10%) contrast(1.1);
-}
-
-/* Transições de Cards */
-.service-card:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .h-96 {
-        height: 250px;
-    }
+/* Animação suave para os cards */
+.group:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.1);
 }

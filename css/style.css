@@ -1,34 +1,37 @@
-/* --- AJUSTE DO LOGO --- */
+/* --- CONFIGURAÇÃO DO NOVO LOGO ACP TELECOM --- */
+
+/* 1. Estado Normal (Topo da página) */
 .site-logo img, 
-.navbar-brand img {
-    max-height: 120px !important; /* Aumenta o logo (podes mudar para 150px se quiseres maior) */
-    width: auto !important;
-    transition: all 0.4s ease-in-out; /* Suaviza a transição ao fazer scroll */
+.navbar-brand img,
+img[src*="logo-acp"] { /* Este seletor garante que o código foca na tua nova imagem */
+    height: 110px !important;    /* Altura generosa para o logo aparecer bem */
+    width: auto !important;      /* Mantém a proporção largura/altura */
+    max-width: 300px !important; /* Limite de largura para não invadir o menu */
+    
+    /* Remove margens fantasmas da imagem */
+    padding: 0 !important;
+    margin-top: -5px !important;  /* Ajuste fino para centralizar verticalmente */
+    
+    /* Transição suave ao fazer scroll */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Renderização de alta qualidade */
+    image-rendering: -webkit-optimize-contrast;
 }
 
-/* --- AJUSTE DO MENU (TEXTOS) --- */
-.navbar-nav > li > a {
-    font-size: 16px !important;    /* Aumenta um pouco a letra para acompanhar o logo */
-    font-weight: 600 !important;   /* Deixa o texto mais legível (Semi-bold) */
-    padding-top: 25px !important;  /* Alinha o texto verticalmente com o novo logo */
-    padding-bottom: 25px !important;
-    color: #333 !important;        /* Cor sólida para melhor leitura */
-}
-
-/* --- COMPORTAMENTO AO DESCER A PÁGINA (SCROLL) --- */
-/* Quando o menu encolhe, o logo e o texto ajustam-se para não tapar o site */
+/* 2. Estado Sticky (Quando desces a página) */
 .is-sticky .site-logo img,
 .is-sticky .navbar-brand img {
-    max-height: 70px !important; 
+    height: 60px !important;      /* O logo encolhe suavemente para dar espaço ao conteúdo */
+    margin-top: 0 !important;
+}
+
+/* 3. Ajuste do Menu de Navegação para alinhar com o logo maior */
+.navbar-nav > li > a {
+    line-height: 110px !important; /* Alinha o texto exatamente ao centro da altura do logo */
+    transition: all 0.4s ease;
 }
 
 .is-sticky .navbar-nav > li > a {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    font-size: 15px !important;
-}
-
-/* --- MELHORIA VISUAL NO HOVER (PASSAR O RATO) --- */
-.navbar-nav > li > a:hover {
-    color: #0056b3 !important; /* Muda para um azul profissional ao passar o rato */
+    line-height: 60px !important;  /* Alinha o texto quando o menu encolhe */
 }

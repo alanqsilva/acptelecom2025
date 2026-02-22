@@ -1,30 +1,34 @@
-/* Efeito Web 3.0 */
-body {
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
+/* --- AJUSTE DO LOGO --- */
+.site-logo img, 
+.navbar-brand img {
+    max-height: 120px !important; /* Aumenta o logo (podes mudar para 150px se quiseres maior) */
+    width: auto !important;
+    transition: all 0.4s ease-in-out; /* Suaviza a transição ao fazer scroll */
 }
 
-.mask-gradient {
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+/* --- AJUSTE DO MENU (TEXTOS) --- */
+.navbar-nav > li > a {
+    font-size: 16px !important;    /* Aumenta um pouco a letra para acompanhar o logo */
+    font-weight: 600 !important;   /* Deixa o texto mais legível (Semi-bold) */
+    padding-top: 25px !important;  /* Alinha o texto verticalmente com o novo logo */
+    padding-bottom: 25px !important;
+    color: #333 !important;        /* Cor sólida para melhor leitura */
 }
 
-/* Scrollbar Personalizada Dark */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #06b6d4;
+/* --- COMPORTAMENTO AO DESCER A PÁGINA (SCROLL) --- */
+/* Quando o menu encolhe, o logo e o texto ajustam-se para não tapar o site */
+.is-sticky .site-logo img,
+.is-sticky .navbar-brand img {
+    max-height: 70px !important; 
 }
 
-/* Animação suave para os cards */
-.group:hover {
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 40px rgba(6, 182, 212, 0.1);
+.is-sticky .navbar-nav > li > a {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    font-size: 15px !important;
+}
+
+/* --- MELHORIA VISUAL NO HOVER (PASSAR O RATO) --- */
+.navbar-nav > li > a:hover {
+    color: #0056b3 !important; /* Muda para um azul profissional ao passar o rato */
 }

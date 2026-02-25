@@ -1,37 +1,44 @@
-/* --- CONFIGURAÇÃO DO NOVO LOGO ACP TELECOM --- */
+/* --- LIMPEZA E APRIMORAMENTO DO LOGO ACPTELECOM --- */
 
-/* 1. Estado Normal (Topo da página) */
+/* 1. Remove o fundo branco e margens do container */
+.navbar-brand, .site-logo, .header-logo {
+    background: transparent !important; /* Mata o fundo branco */
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 2. Ajuste de tamanho da imagem (Onde a mágica acontece) */
 .site-logo img, 
 .navbar-brand img,
-img[src*="logo-acp"] { /* Este seletor garante que o código foca na tua nova imagem */
-    height: 110px !important;    /* Altura generosa para o logo aparecer bem */
-    width: auto !important;      /* Mantém a proporção largura/altura */
-    max-width: 300px !important; /* Limite de largura para não invadir o menu */
+img[src*="logo-acp"] {
+    height: 100px !important;    /* Aumenta o tamanho para 100px */
+    width: auto !important;      /* Mantém a proporção */
+    max-height: 120px !important;/* Garante que o tema não limite o crescimento */
     
-    /* Remove margens fantasmas da imagem */
-    padding: 0 !important;
-    margin-top: -5px !important;  /* Ajuste fino para centralizar verticalmente */
+    /* Remove sombras ou bordas da imagem */
+    border: none !important;
+    box-shadow: none !important;
     
-    /* Transição suave ao fazer scroll */
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Renderização de alta qualidade */
+    /* Melhora a nitidez */
     image-rendering: -webkit-optimize-contrast;
+    
+    /* Suaviza o encolhimento ao descer a página */
+    transition: height 0.3s ease-in-out;
 }
 
-/* 2. Estado Sticky (Quando desces a página) */
+/* 3. Ajuste para o Menu Fixo (Quando desces a página) */
 .is-sticky .site-logo img,
 .is-sticky .navbar-brand img {
-    height: 60px !important;      /* O logo encolhe suavemente para dar espaço ao conteúdo */
-    margin-top: 0 !important;
+    height: 60px !important; /* Encolhe para não atrapalhar a leitura */
 }
 
-/* 3. Ajuste do Menu de Navegação para alinhar com o logo maior */
+/* 4. Ajuste dos textos do Menu para ficarem alinhados ao meio */
 .navbar-nav > li > a {
-    line-height: 110px !important; /* Alinha o texto exatamente ao centro da altura do logo */
-    transition: all 0.4s ease;
+    line-height: 100px !important; /* Deve ser igual à altura do logo acima */
 }
 
 .is-sticky .navbar-nav > li > a {
-    line-height: 60px !important;  /* Alinha o texto quando o menu encolhe */
+    line-height: 60px !important;
 }

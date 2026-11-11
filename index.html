@@ -13,10 +13,10 @@
         .mask-gradient { mask-image: linear-gradient(to bottom, black 80%, transparent); }
         html { scroll-behavior: smooth; }
         
-        /* Técnica para dar zoom no centro da imagem da logo */
+        /* Aumentamos o zoom da logo para ela preencher bem a caixa branca */
         .logo-ajustada {
-            transform: scale(2.5); /* Dá o zoom */
-            transform-origin: center; /* Mantém o foco no centro */
+            transform: scale(3.2); 
+            transform-origin: center;
         }
     </style>
 </head>
@@ -26,12 +26,12 @@
         <img src="assets/banner-hero.png" class="w-full h-full object-cover" alt="Background">
     </div>
 
+    <!-- HEADER COM LOGO DESTACADA -->
     <header class="fixed w-full z-50 py-6 px-6">
         <div class="container mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-3 flex justify-between items-center shadow-2xl">
             
-            <!-- LOGO COM FUNDO BRANCO E ZOOM CORRIGIDO -->
-            <div class="flex-shrink-0 bg-white rounded-xl shadow-lg w-44 h-14 flex items-center justify-center overflow-hidden relative">
-                <!-- O 'logo-ajustada' dá o zoom, e o 'overflow-hidden' na div acima corta o excesso -->
+            <!-- Caixa branca ajustada (w-52 h-16) e logo com zoom (3.2) -->
+            <div class="flex-shrink-0 bg-white rounded-xl shadow-lg w-52 h-16 flex items-center justify-center overflow-hidden">
                 <img src="assets/logo-acp.png" alt="ACPTelecom" class="w-full h-full object-contain logo-ajustada">
             </div>
             

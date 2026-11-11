@@ -13,10 +13,10 @@
         .mask-gradient { mask-image: linear-gradient(to bottom, black 80%, transparent); }
         html { scroll-behavior: smooth; }
         
-        /* Classe mágica para dar zoom na logo e cortar o espaço em branco */
-        .logo-zoom {
-            transform: scale(2.2); /* Aumenta a logo em 2.2 vezes */
-            transform-origin: center; /* Mantém o zoom no centro */
+        /* Técnica para dar zoom no centro da imagem da logo */
+        .logo-ajustada {
+            transform: scale(2.5); /* Dá o zoom */
+            transform-origin: center; /* Mantém o foco no centro */
         }
     </style>
 </head>
@@ -27,12 +27,12 @@
     </div>
 
     <header class="fixed w-full z-50 py-6 px-6">
-        <div class="container mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-4 flex justify-between items-center shadow-2xl">
+        <div class="container mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-3 flex justify-between items-center shadow-2xl">
             
-            <!-- ÁREA DA LOGO -->
-            <div class="flex-shrink-0 bg-white rounded-xl shadow-lg w-48 h-16 flex items-center justify-center overflow-hidden relative">
-                <!-- O 'overflow-hidden' corta o excesso que sair do quadrado branco, e o 'logo-zoom' aumenta a imagem -->
-                <img src="assets/logo-acp.png" alt="ACPTelecom" class="w-full h-full object-contain logo-zoom">
+            <!-- LOGO COM FUNDO BRANCO E ZOOM CORRIGIDO -->
+            <div class="flex-shrink-0 bg-white rounded-xl shadow-lg w-44 h-14 flex items-center justify-center overflow-hidden relative">
+                <!-- O 'logo-ajustada' dá o zoom, e o 'overflow-hidden' na div acima corta o excesso -->
+                <img src="assets/logo-acp.png" alt="ACPTelecom" class="w-full h-full object-contain logo-ajustada">
             </div>
             
             <nav class="hidden lg:block">

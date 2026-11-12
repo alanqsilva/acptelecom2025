@@ -13,9 +13,28 @@
         .mask-gradient { mask-image: linear-gradient(to bottom, black 85%, transparent); }
         html { scroll-behavior: smooth; }
         
-        /* Zoom aumentado para 5.5 para a logo preencher todo o espaço branco */
+        /* ====================================================================
+           CONFIGURAÇÃO DA LOGO NO MENU
+           ==================================================================== */
         .logo-ajustada {
-            transform: scale(5.5); 
+            /* 
+             * 1. scale(5.5): Aumenta a imagem em 5.5 vezes o tamanho original.
+             *    É isso que faz as letras "ACPTelecom" ficarem grandes e legíveis.
+             * 
+             * 2. translateY(30%): Empurra a imagem 30% do seu tamanho para BAIXO.
+             *    Isso é necessário porque a imagem original tem um espaço transparente
+             *    grande na parte de cima. Ao descer a imagem, centralizamos as letras 
+             *    dentro do quadrado branco.
+             * 
+             * *DICA*: Se achar que ainda está muito para cima, mude para 35% ou 40%.
+             *        Se achar que desceu demais (cortou a parte de baixo), mude para 20%.
+             */
+            transform: scale(5.5) translateY(30%); 
+            
+            /* 
+             * 3. transform-origin: center: Garante que o zoom e o deslocamento 
+             *    aconteçam a partir do centro da imagem, mantendo a simetria.
+             */
             transform-origin: center;
         }
     </style>
@@ -30,7 +49,12 @@
     <header class="fixed w-full z-50 py-6 px-6">
         <div class="container mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-3 flex justify-between items-center shadow-2xl">
             
-            <!-- Caixa branca ajustada (w-52 h-14) e logo com zoom (4.5) -->
+            <!-- 
+              CAIXA BRANCA DA LOGO: 
+              - w-52 h-14: Define a largura (208px) e altura (56px) do fundo branco.
+              - overflow-hidden: Tudo que a imagem aumentar com o "scale" e sair 
+                para fora dessa caixa será cortado, deixando o visual limpo.
+            -->
             <div class="flex-shrink-0 bg-white rounded-lg shadow-lg w-52 h-14 flex items-center justify-center overflow-hidden">
                 <img src="assets/logo-acp.png" alt="ACPTelecom" class="w-full h-full object-contain logo-ajustada">
             </div>
@@ -75,7 +99,7 @@
                 <div class="lg:col-span-5 relative">
                     <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl blur opacity-20 animate-pulse"></div>
                     <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                        <img src="assets/alan-queiroz.jpg" alt="Alan Queiroz - Engenheiro de Telecomunicações" class="w-full h-auto object-cover">
+                        <img src="assets/alan-queiroz.jpg" alt="Alan Silva - Engenheiro de Telecomunicações" class="w-full h-auto object-cover">
                         <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent">
                             <h4 class="text-white font-bold text-xl leading-none">Alan Silva</h4>
                             <p class="text-cyan-400 text-sm mt-2 font-medium uppercase tracking-wider">Engenheiro de Telecomunicações</p>
@@ -144,7 +168,7 @@
                     </form>
                 </div>
                 <div class="bg-slate-800 relative h-[400px] lg:h-auto">
-                    <!-- MAPA ATUALIZADO COM O ENDEREÇO EXATO -->
+                    <!-- MAPA -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973.8907208641503!2d-67.8571514!3d-9.9800346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8e7f89ab40a9%3A0x7bc025f7935bdf0a!2sR.%20Tiradentes%2C%20158%20-%20Vilage%20Tiradentes%2C%20Rio%20Branco%20-%20AC%2C%2069914-090!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" class="absolute inset-0 w-full h-full opacity-90 hover:opacity-100 transition-opacity duration-300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

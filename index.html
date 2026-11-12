@@ -13,16 +13,10 @@
         .mask-gradient { mask-image: linear-gradient(to bottom, black 85%, transparent); }
         html { scroll-behavior: smooth; }
         
-        /* ====================================================================
-           AJUSTE FINO DA LOGO
-           ==================================================================== */
+        /* CONFIGURAÇÃO DA LOGO (Voltando ao que funcionava) */
         .logo-ajustada {
-            /* 
-             * scale(5.5): Mantém a logo no tamanho grande que você gostou.
-             * translateY(45%): Empurra a imagem para baixo. Aumentei de 30% para 45% para descer mais.
-             * Se quiser descer mais um pouquinho, mude para 50% ou 55%.
-             */
-            transform: scale(5.5) translateY(45%); 
+            /* scale(5.5) para o tamanho grande. translateY(10%) para centralizar sem sumir */
+            transform: scale(5.5) translateY(10%); 
             transform-origin: center;
         }
     </style>
@@ -37,9 +31,7 @@
     <header class="fixed w-full z-50 py-6 px-6">
         <div class="container mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-3 flex justify-between items-center shadow-2xl">
             
-            <!-- 
-              CAIXA BRANCA: w-52 h-14. O 'overflow-hidden' é o que corta o excesso da imagem
-            -->
+            <!-- Caixa branca com as medidas originais -->
             <div class="flex-shrink-0 bg-white rounded-lg shadow-lg w-52 h-14 flex items-center justify-center overflow-hidden">
                 <img src="assets/logo-acp.png" alt="ACPTelecom" class="w-full h-full object-contain logo-ajustada">
             </div>
